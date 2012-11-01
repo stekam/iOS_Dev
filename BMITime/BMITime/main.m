@@ -29,14 +29,23 @@ int main(int argc, const char * argv[])
         
         NSLog(@"Empl Inst in Prsn - Weight %d and Height %f gives BMI is %f",  pers.weightInKilo , pers.heightInMeter, pers.BMI  );
         
+        NSMutableArray *emplTab = [ [ NSMutableArray alloc] init ];
         
-        Employee *empl = [ [ Employee alloc ] init ];
+        for( int i; i != 5 ; i++ ){
         
-        [ empl setWeightInKilo:80];
-        [ empl setHeight:1.87];
+            Employee *empl = [ [ Employee alloc ] init ];
+            empl.employeeID = i;
+            [ empl setWeightInKilo:80];
+            [ empl setHeight:1.87];
+            [ emplTab addObject:empl];
+        }
         
-        NSLog(@"Empl Inst in Empl - Weight %d and Height %f gives BMI is %f",  empl.weightInKilo , empl.heightInMeter, empl.BMI  );
         
+        for( Employee *empl in emplTab){
+                   NSLog(@"Empl Inst in Empl - Weight %d and Height %f gives BMI is %f - EmplID %d ",  empl.weightInKilo , empl.heightInMeter, empl.BMI, [ empl employeeID ]  );
+        }
+        
+
         
         
        
