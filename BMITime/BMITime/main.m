@@ -21,11 +21,9 @@ int main(int argc, const char * argv[])
         
 
         
-        NSLog(@"Weight %d and Height %f gives BMI is %f", [ pers weightInKilo ], [ pers heightInMeter], [ pers BMI ] );
+        NSLog(@"Weight %d and Height %f gives BMI is %f",  pers.weightInKilo , pers.heightInMeter, pers.BMI  );
         
-        // insert code here...
-//        NSLog(@"Weight %d - Height %f - BMI %f", [ pers weightInKilo ], [ pers heightInMeter], [ pers BMI ]);
-        
+       
     }
     return 0;
 }
