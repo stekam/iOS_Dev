@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4695DE1164304A5004F89B5 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = D4695DE0164304A5004F89B5 /* Employee.m */; };
 		D49D40BB1642CD710001F42C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49D40BA1642CD710001F42C /* Foundation.framework */; };
 		D49D40BE1642CD710001F42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D49D40BD1642CD710001F42C /* main.m */; };
 		D49D40C21642CD710001F42C /* BMITime.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49D40C11642CD710001F42C /* BMITime.1 */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D4695DDF164304A5004F89B5 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = BMITime/Employee.h; sourceTree = "<group>"; };
+		D4695DE0164304A5004F89B5 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = BMITime/Employee.m; sourceTree = "<group>"; };
 		D49D40B61642CD710001F42C /* BMITime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BMITime; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D40BA1642CD710001F42C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D49D40BD1642CD710001F42C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		D49D40AB1642CD710001F42C = {
 			isa = PBXGroup;
 			children = (
+				D4695DDF164304A5004F89B5 /* Employee.h */,
+				D4695DE0164304A5004F89B5 /* Employee.m */,
 				D49D40C81642CDA50001F42C /* Person.h */,
 				D49D40C91642CDA50001F42C /* Person.m */,
 				D49D40BC1642CD710001F42C /* BMITime */,
@@ -146,6 +151,7 @@
 			files = (
 				D49D40BE1642CD710001F42C /* main.m in Sources */,
 				D49D40CA1642CDA50001F42C /* Person.m in Sources */,
+				D4695DE1164304A5004F89B5 /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +248,7 @@
 				D49D40C71642CD710001F42C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
