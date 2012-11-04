@@ -20,6 +20,7 @@ int main(int argc, const char * argv[])
         [ pers setHeight:1.87];
         
         NSLog(@"Prsn Inst in Prsn - Weight %d and Height %f gives BMI is %f",  pers.weightInKilo , pers.heightInMeter, pers.BMI  );
+        
 
         
         pers = [ [ Employee alloc ] init ];
