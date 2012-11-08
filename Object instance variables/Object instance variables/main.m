@@ -47,11 +47,27 @@ int main(int argc, const char * argv[])
         
         NSLog(@"Giving up one person");
         
-        [ perss removeObjectAtIndex:5];
+        [ perss removeObjectAtIndex:9];
         
         perss = nil;
+
+//        Asset *ass;
+//        
+//        ass = [ [ Asset alloc ]init ];
+//        
+//        [ ass setLabel:@"Test1"];
+//        [ ass setResaleValue:5];
+//        
+//        NSLog(@"Asset %@", ass);
+//
+//        
+//        ass = [ [ Asset alloc ]init ];
+//        
+//        [ ass setLabel:@"Test2"];
+//        [ ass setResaleValue:10];
         
     }
+
     return 0;
 }
 

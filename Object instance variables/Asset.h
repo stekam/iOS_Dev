@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Person;
 
 @interface Asset : NSObject
 {
     NSString *label;
     unsigned int resaleValue;
-    
+    __weak Person *holder ;
 }
-
+@property (weak) Person *holder;
 @property (strong) NSString *label;
 @property unsigned int resaleValue;
 @end

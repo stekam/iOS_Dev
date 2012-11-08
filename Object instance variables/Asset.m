@@ -12,10 +12,14 @@
 
 @synthesize label;
 @synthesize resaleValue;
-
+@synthesize holder;
 
 -(NSString *)description{
-    return [ NSString stringWithFormat:@"%@ : $%d", self.label, self.resaleValue];
+    if ( holder == nil ){
+        return [ NSString stringWithFormat:@"%@ : $%d :  Unassigned ", self.label, self.resaleValue];
+    }else{
+        return [ NSString stringWithFormat:@"%@ : $%d : %@", self.label, self.resaleValue, self.holder ];
+    }
 }
 
 -(void)dealloc{

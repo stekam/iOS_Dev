@@ -28,16 +28,23 @@
 
 
 -(void)addAssetsObjects:(Asset *)newAss{
+    if ( assets == nil ){
+        assets = [ [ NSMutableArray alloc ] init ];
+        }
     [ assets addObject:newAss];
+    [ newAss setHolder:self];
 }
 
 -(unsigned int)valueOfAssets{
-    unsigned int value;
-    
-    for( Asset *ass in assets){
-        value += ass.resaleValue;
+    unsigned int sum = 0;
+    if ( assets != nil ){
+        for( Asset *ass in assets){
+            sum += ass.resaleValue;
+        }
     }
-    return value;
+    
+    return sum;
+
 }
 
 - (int) weightInKilo{
@@ -50,8 +57,11 @@
 }
 
 
-- (float) heightInMeter{
-    return heightInMeter;
+
+-(NSString *)description{
+
+    return [ NSString stringWithFormat:@"%s : $%d", "Test" , [ self valueOfAssets]  ];
 }
+
 
 @end
