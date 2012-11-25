@@ -38,19 +38,13 @@
 - (IBAction)showQuestion:(id)sender
 {
     // Step to the next question
-    currentQuestionIndex++;
-    
-    // Am I past the last question?
-    if (currentQuestionIndex == [questions count]) {
-        // If so, go back to the first question
-        currentQuestionIndex = 0;
-    }
-    
+    currentQuestionIndex = random() % questions.count ;
+        
     // Get the string in the current index of the questions array
     NSString *question = [questions objectAtIndex:currentQuestionIndex];
     
     // Output the question string to the debug console
-    NSLog(@"Displaying question: %@",question);
+    NSLog(@"Displaying question %d : %@", currentQuestionIndex , question);
     
     // Display the string in the question text field
     [questionField setText:question];
