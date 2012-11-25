@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SKCViewController : UIViewController
+@interface SKCViewController : UIViewController <UITextFieldDelegate,UITableViewDataSource>
 
 {
     int currentQuestionIndex;
+    
+    BOOL editable;
     
     // The model objects
     NSMutableArray *questions;
@@ -20,6 +22,7 @@
     // The view objects
     IBOutlet UILabel *questionField;
     IBOutlet UILabel *answerField;
+    IBOutlet UITextField *textFiled;
 }
 
 // Actions for the buttons to invoke

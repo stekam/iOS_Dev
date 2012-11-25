@@ -48,9 +48,13 @@
     
     // Display the string in the question text field
     [questionField setText:question];
+  
+    [ textFiled setText:question];
     
     // Clear the answer text field
     [answerField setText:@"???"];
+    
+    editable = YES;
 }
 
 - (IBAction)showAnswer:(id)sender
@@ -61,4 +65,27 @@
     // Display the answer string in the answer text field
     [answerField setText:answer];
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return [ questions count ];
+}
+
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    return editable;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [ UITableViewCell alloc];
+    NSString *text = [ questions objectAtIndex:[ indexPath row] ];
+    
+    
+    [[ cell textLabel ] setText:text];
+    
+    return cell;
+    
+    
+}
+
 @end
