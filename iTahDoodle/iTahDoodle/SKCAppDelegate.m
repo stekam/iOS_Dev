@@ -11,6 +11,8 @@
 NSString *docPath(){
     NSArray *pathlist = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
+    NSLog(@"Path %@ ",  [ pathlist objectAtIndex:0]  );
+    
     return [ [ pathlist objectAtIndex:0] stringByAppendingPathComponent:@"data.dta"];
  
     
@@ -88,9 +90,10 @@ NSString *docPath(){
     
     CGRect windowFrame = [ [ UIScreen mainScreen] bounds];
     
-    UIWindow *window = [ [ UIWindow alloc ] initWithFrame:windowFrame];
+    UIWindow *thewindow = [ [ UIWindow alloc ] initWithFrame:windowFrame];
     
-    [ self setWindow:window];
+    [ self setWindow:thewindow];
+   
     
     // define the 3 zone
     CGRect tableFrame = CGRectMake(0, 80, 320, 380);
@@ -126,6 +129,7 @@ NSString *docPath(){
     [ [ self window ] makeKeyAndVisible ];
 
     
+    
     return YES;
  
     
@@ -135,6 +139,8 @@ NSString *docPath(){
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    [ tasks writeToFile:docPath() atomically:YES];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
